@@ -1,19 +1,31 @@
 apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: DIMO
+spec:
+  owner: team-draco
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: mobile-ordering-api
+spec:
+  type: backend
+  lifecycle: production
+  owner: team-draco
+  system: dimo
+  providesApis: [mobile-ordering-api]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: artist-api
-  description: Retrieve artist details
+  name: mobile-ordering-api
 spec:
-  type: openapi
+  type: java
   lifecycle: production
-  owner: artist-relations-team
-  system: artist-engagement-portal
+  owner: team-draco
+  system: dimo
   definition: |
-    openapi: "3.0.0"
-    info:
-      version: 1.0.0
-      title: Artist API
-      license:
-        name: MIT
-    servers:
-      - url: http://artist.spotify.net/v1
+    
