@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: mobile-ordering-api
+  description: The DIMO Backend API
+spec:
+  type: openapi
+  lifecycle: production
+  lifecycle: production
+  owner: draco@madmobile.com
