@@ -27,7 +27,4 @@ spec:
   lifecycle: production
   owner: team-draco
   system: dimo
-  definition: |
-    info:
-      version: 1.0.0
-      title: Mobile Ordering API    
+  
